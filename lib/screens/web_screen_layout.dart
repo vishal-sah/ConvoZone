@@ -1,5 +1,6 @@
 import 'package:convo_zone/widgets/contacts_list.dart';
 import 'package:convo_zone/widgets/web_profile_bar.dart';
+import 'package:convo_zone/widgets/web_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -19,7 +20,7 @@ class WebScreenLayout extends StatelessWidget {
                   // Profile Bar
                   WebProfileBar(),
                   // Search Bar
-
+                  WebSearchBar(),
                   // Contact List
                   ContactsList(),
                 ],
