@@ -1,4 +1,5 @@
 import 'package:convo_zone/colors.dart';
+import 'package:convo_zone/widgets/contacts_list.dart';
 import 'package:flutter/material.dart';
 
 class MobileScreenLayout extends StatelessWidget {
@@ -61,6 +62,7 @@ class MobileScreenLayout extends StatelessWidget {
             ],
           ),
         ),
+        body: const ContactsList(),
       ),
     );
   }
