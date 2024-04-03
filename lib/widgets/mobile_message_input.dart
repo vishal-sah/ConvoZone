@@ -10,7 +10,7 @@ class MobileMessageInput extends StatefulWidget {
 
 class _MobileMessageInputState extends State<MobileMessageInput> {
   final TextEditingController _textEditingController = TextEditingController();
-  bool _showSendIcon = false;
+  bool _isMessageEmpty = false;
 
   @override
   void initState() {
@@ -26,7 +26,7 @@ class _MobileMessageInputState extends State<MobileMessageInput> {
 
   void _onTextChanged() {
     setState(() {
-      _showSendIcon = _textEditingController.text.isNotEmpty;
+      _isMessageEmpty = _textEditingController.text.isNotEmpty;
     });
   }
 
@@ -52,29 +52,21 @@ class _MobileMessageInputState extends State<MobileMessageInput> {
                 controller: _textEditingController,
                 decoration: InputDecoration(
                   prefixIcon: IconButton(
-                    onPressed: () {
-                      showModalBottomSheet(
-                        context: context,
-                        builder: (BuildContext subcontext) {
-                          return const SizedBox(
-                            height: 256,
-                            child: Placeholder(), // Emoji selector
-                          );
-                        },
-                      );
-                    },
+                    onPressed: () {},
                     icon: const Icon(
                       Icons.emoji_emotions_outlined,
                       color: Colors.grey,
                     ),
                   ),
-                  suffixIcon: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.attach_file,
-                      color: Colors.grey,
-                    ),
-                  ),
+                  suffixIcon: !_isMessageEmpty
+                      ? IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.attach_file,
+                            color: Colors.grey,
+                          ),
+                        )
+                      : null,
                   fillColor: searchBarColor,
                   filled: true,
                   hintText: 'Message',
@@ -90,17 +82,21 @@ class _MobileMessageInputState extends State<MobileMessageInput> {
               ),
             ),
           ),
-          IconButton(
-            onPressed: () {
-              if (_showSendIcon) {
-                // Send button functionality
-              } else {
-                // Microphone button functionality
-              }
-            },
-            icon: Icon(
-              _showSendIcon ? Icons.send : Icons.mic,
-              color: Colors.grey,
+          CircleAvatar(
+            backgroundColor: tabColor,
+            radius: 25,
+            child: IconButton(
+              onPressed: () {
+                if (_isMessageEmpty) {
+                  // Send button functionality
+                } else {
+                  // Microphone button functionality
+                }
+              },
+              icon: Icon(
+                _isMessageEmpty ? Icons.send : Icons.mic,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
