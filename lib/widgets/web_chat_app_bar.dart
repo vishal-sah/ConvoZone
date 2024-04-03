@@ -39,7 +39,7 @@ class WebChatAppBar extends StatelessWidget {
               IconButton(
                 onPressed: () {},
                 icon: const Icon(
-                  Icons.videocam,
+                  Icons.video_call,
                   color: Colors.grey,
                 ),
               ),

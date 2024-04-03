@@ -1,4 +1,5 @@
 import 'package:convo_zone/info.dart';
+import 'package:convo_zone/screens/mobile_chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class ContactsList extends StatelessWidget {
@@ -13,7 +14,13 @@ class ContactsList extends StatelessWidget {
         itemCount: info.length,
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => MobileChatScreen(index: index),
+                ),
+              );
+            },
             onLongPress: () {},
             onHover: (value) {},
             child: Padding(
