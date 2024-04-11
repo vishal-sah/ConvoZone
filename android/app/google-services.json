@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222511398580",
+    "project_id": "convo-zone",
+    "storage_bucket": "convo-zone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222511398580:android:a0e5528ec977a54bba21e1",
+        "android_client_info": {
+          "package_name": "com.example.convo_zone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMoXrtRRRAUAoHdF2mG05H2kuieMuub20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

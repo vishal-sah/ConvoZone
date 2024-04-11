@@ -10,7 +10,7 @@ class WebMessageInput extends StatefulWidget {
 
 class _WebMessageInputState extends State<WebMessageInput> {
   final TextEditingController _textEditingController = TextEditingController();
-  bool _showSendIcon = false;
+  bool _isMessageEmpty = false;
 
   @override
   void initState() {
@@ -26,7 +26,7 @@ class _WebMessageInputState extends State<WebMessageInput> {
 
   void _onTextChanged() {
     setState(() {
-      _showSendIcon = _textEditingController.text.isNotEmpty;
+      _isMessageEmpty = _textEditingController.text.isNotEmpty;
     });
   }
 
@@ -82,14 +82,14 @@ class _WebMessageInputState extends State<WebMessageInput> {
           ),
           IconButton(
             onPressed: () {
-              if (_showSendIcon) {
+              if (_isMessageEmpty) {
                 // Send button functionality
               } else {
                 // Microphone button functionality
               }
             },
             icon: Icon(
-              _showSendIcon ? Icons.send : Icons.mic,
+              _isMessageEmpty ? Icons.send : Icons.mic,
               color: Colors.grey,
             ),
           ),
