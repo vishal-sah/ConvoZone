@@ -52,6 +52,7 @@ class UserMessageCard extends StatelessWidget {
                     const SizedBox(
                       width: 5,
                     ),
+                    // Seen and sent
                     Icon(
                       Icons.done_all,
                       size: 20,
