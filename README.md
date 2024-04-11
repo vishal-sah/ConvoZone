@@ -1,6 +1,5 @@
 # ConvoZone
 
-Building a chat application with some additional features.
-Purely a learning project.
+Building a chat application using firebase as backend.
 
 Will be updating soonn......
