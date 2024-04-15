@@ -1,8 +1,9 @@
 import 'package:convo_zone/colors.dart';
+import 'package:convo_zone/features/landing/screens/landing_screen.dart';
 import 'package:convo_zone/firebase_options.dart';
-import 'package:convo_zone/responsive/responsive_layout.dart';
-import 'package:convo_zone/screens/mobile_screen_layout.dart';
-import 'package:convo_zone/screens/web_screen_layout.dart';
+// import 'package:convo_zone/responsive/responsive_layout.dart';
+// import 'package:convo_zone/screens/mobile_screen_layout.dart';
+// import 'package:convo_zone/screens/web_screen_layout.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -25,10 +26,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: const ResponsiveLayout(
-        mobileScreenLayout: MobileScreenLayout(),
-        webScreenLayout: WebScreenLayout(),
-      ),
+      // home: const ResponsiveLayout(
+      //   mobileScreenLayout: MobileScreenLayout(),
+      //   webScreenLayout: WebScreenLayout(),
+      // ),
+      home: const LandingScreen(),
     );
   }
 }
