@@ -1,15 +1,18 @@
-import 'package:convo_zone/colors.dart';
 import 'package:convo_zone/common/widgets/custom_buttom.dart';
+import 'package:convo_zone/features/auth/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({super.key});
 
+  void navigateToLoginScreen(BuildContext context) {
+    Navigator.pushNamed(context, LoginScreen.routeName);
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: backgroundColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -40,7 +43,7 @@ class LandingScreen extends StatelessWidget {
                 width: size.width * 0.7,
                 child: CustomButton(
                   text: 'CONTINUE',
-                  onPressed: () {},
+                  onPressed: () => navigateToLoginScreen(context),
                 ),
               ),
             ],

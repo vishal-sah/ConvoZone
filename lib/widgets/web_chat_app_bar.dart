@@ -40,14 +40,14 @@ class WebChatAppBar extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(
                   Icons.video_call,
-                  color: Colors.grey,
+                  color: greyColor,
                 ),
               ),
               IconButton(
                 onPressed: () {},
                 icon: const Icon(
                   Icons.call,
-                  color: Colors.grey,
+                  color: greyColor,
                 ),
               ),
               SizedBox(
@@ -57,7 +57,7 @@ class WebChatAppBar extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(
                   Icons.search,
-                  color: Colors.grey,
+                  color: greyColor,
                 ),
               ),
               IconButton(
