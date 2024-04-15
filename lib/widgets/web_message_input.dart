@@ -49,14 +49,14 @@ class _WebMessageInputState extends State<WebMessageInput> {
             onPressed: () {},
             icon: const Icon(
               Icons.attach_file,
-              color: Colors.grey,
+              color: greyColor,
             ),
           ),
           IconButton(
             onPressed: () {},
             icon: const Icon(
               Icons.emoji_emotions_outlined,
-              color: Colors.grey,
+              color: greyColor,
             ),
           ),
           Expanded(
@@ -90,7 +90,7 @@ class _WebMessageInputState extends State<WebMessageInput> {
             },
             icon: Icon(
               _isMessageEmpty ? Icons.send : Icons.mic,
-              color: Colors.grey,
+              color: greyColor,
             ),
           ),
         ],

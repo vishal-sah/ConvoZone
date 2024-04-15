@@ -55,7 +55,7 @@ class _MobileMessageInputState extends State<MobileMessageInput> {
                     onPressed: () {},
                     icon: const Icon(
                       Icons.emoji_emotions_outlined,
-                      color: Colors.grey,
+                      color: greyColor,
                     ),
                   ),
                   suffixIcon: !_isMessageEmpty
@@ -63,7 +63,7 @@ class _MobileMessageInputState extends State<MobileMessageInput> {
                           onPressed: () {},
                           icon: const Icon(
                             Icons.attach_file,
-                            color: Colors.grey,
+                            color: greyColor,
                           ),
                         )
                       : null,

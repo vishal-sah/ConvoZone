@@ -1,8 +1,7 @@
 import 'package:convo_zone/colors.dart';
+import 'package:convo_zone/features/landing/screens/landing_screen.dart';
 import 'package:convo_zone/firebase_options.dart';
-import 'package:convo_zone/responsive/responsive_layout.dart';
-import 'package:convo_zone/screens/mobile_screen_layout.dart';
-import 'package:convo_zone/screens/web_screen_layout.dart';
+import 'package:convo_zone/router.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -24,11 +23,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
+        appBarTheme: const AppBarTheme(
+          color: appBarColor,
+        ),
       ),
-      home: const ResponsiveLayout(
-        mobileScreenLayout: MobileScreenLayout(),
-        webScreenLayout: WebScreenLayout(),
-      ),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: const LandingScreen(),
     );
   }
 }
